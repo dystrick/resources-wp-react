@@ -1,9 +1,25 @@
-import { Button } from "@/components/ui/button";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Provider } from "@/components/Provider";
+import { Archive } from "@/pages/Archive";
+import { Single } from "@/pages/Single";
 
-export default function App() {
+export function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
+    <Provider
+    // baseUrl="https://nolan.dystrick.dev"
+    // basePath="/blog"
+    >
+      <BrowserRouter>
+        <Switch>
+          <Route
+            path="/:slug"
+            render={(props: any) => {
+              return <Single slug={props.match.params.slug} />;
+            }}
+          />
+          <Route path="/" component={Archive} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }

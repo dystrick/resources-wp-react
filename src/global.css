@@ -121,4 +121,28 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  img.alignleft {
+    @apply float-left mr-4 mb-4;
+  }
+
+  img.aligncenter {
+    @apply block mx-auto mb-4;
+  }
+
+  img.alignright {
+    @apply float-right ml-4 mb-4;
+  }
+
+  a img.alignleft {
+    @apply float-left mr-4 mb-4;
+  }
+
+  a img.aligncenter {
+    @apply block mx-auto mb-4;
+  }
+
+  a img.alignright {
+    @apply float-right ml-4 mb-4;
+  }
 }
