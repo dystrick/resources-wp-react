@@ -1,4 +1,3 @@
-import { Link as RouterLink } from "react-router-dom";
 import {
   Box,
   BoxProps,
@@ -10,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 interface CardProps extends BoxProps {
-  to: string;
+  href: string;
   image: any;
   title: string;
   description: string;
@@ -18,6 +17,7 @@ interface CardProps extends BoxProps {
   categories: any[];
   colorScheme: string;
 }
+
 export function SkeletonCard() {
   return (
     <Box borderWidth="1px" borderRadius={3}>
@@ -35,7 +35,7 @@ export function SkeletonCard() {
 
 function Card({
   className,
-  to,
+  href,
   image,
   title,
   description,
@@ -45,8 +45,8 @@ function Card({
 }: CardProps) {
   return (
     <Box
-      as={RouterLink}
-      to={to}
+      as="a"
+      href={href}
       className={`wp-resources-pro-card ${className}`}
       textDecoration="none"
       borderWidth="1px"

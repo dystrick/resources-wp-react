@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { useResourcesContext } from "@/components/Provider";
 import { useResource } from "@/hooks/queries";
 import {
@@ -64,8 +63,8 @@ export function Single({ slug }: { slug: string }) {
           mb={3}
         >
           <Link
-            as={RouterLink}
-            to={basePath || `/`}
+            as="a"
+            href={basePath || `/`}
             color="gray.600"
             fontSize="xs"
             fontWeight="semibold"
