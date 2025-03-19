@@ -203,7 +203,9 @@ export function Archive() {
                 <Card
                   key={resource.id}
                   className="wp-resources-pro-archive__list-item"
-                  to={basePath ? `${basePath}/${resource.slug}` : resource.slug}
+                  href={
+                    basePath ? `${basePath}/${resource.slug}` : resource.slug
+                  }
                   image={resource.image}
                   title={resource.title}
                   description={resource.description}
