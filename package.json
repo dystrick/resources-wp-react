@@ -1,6 +1,6 @@
 {
   "name": "@dystrick/resources-wp-react",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "main": "./dist/resources-wp-react.umd.js",
   "module": "./dist/resources-wp-react.es.js",
@@ -74,7 +74,8 @@
     "react-router-dom": "^5.3.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3"
   },
   "peerDependencies": {
     "react": "^19.0.0",

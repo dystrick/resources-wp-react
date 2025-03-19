@@ -2,10 +2,15 @@ import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import dts from "vite-plugin-dts";
 
 // Get the mode from environment
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({ tsconfigPath: "./tsconfig.app.json", rollupTypes: true }),
+  ],
   envPrefix: "RESOURCES_WP_PUBLIC_",
   server: {
     proxy:
