@@ -1,6 +1,6 @@
 {
   "name": "@dystrick/resources-wp-react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "main": "./dist/resources-wp-react.umd.js",
   "module": "./dist/resources-wp-react.es.js",
